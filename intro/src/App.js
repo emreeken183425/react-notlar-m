@@ -1,9 +1,20 @@
 
+import React from "react";
+import Navi from "./Navi";
+import CategoriList from "./CategoriList";
+import ProductList from "./ProductList";
+
 
 function App() {
   return (
-    <div className="App">
-      <h3>hello from react</h3>
+    <div >
+      
+      <Navi></Navi>
+      <CategoriList/>
+      <ProductList/>
+      
+      
+
     </div>
   );
 }
