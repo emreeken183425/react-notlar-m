@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
     <div>
       <ul className="container d-flex justify-content-around mt-4">
         <li>
-          <link to="/">Home</link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <link to="/instructors">instructors</link>
+          <Link to="/instructors">Instructors</Link>
         </li>
         <li>
-          <link to="/contact">Contact</link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </div>
