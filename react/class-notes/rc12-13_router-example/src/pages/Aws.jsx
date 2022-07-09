@@ -1,4 +1,4 @@
-const FullStack = () => {
+const Aws = () => {
   return (
     <div className="mt-4 text-center">
       <h1 className="display-6 text-warning">AWS/DevOps Path</h1>
@@ -17,4 +17,4 @@ const FullStack = () => {
   );
 };
 
-export default FullStack;
+export default Aws;
