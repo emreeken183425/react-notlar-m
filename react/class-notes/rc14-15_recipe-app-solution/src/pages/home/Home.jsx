@@ -1,11 +1,11 @@
 import HomeStyle from './Home.style'
 
-const home = () => {
+const Home = () => {
     return (
         <div>
-            Home
+            
         </div>
     )
 }
 
-export default  home();
+export default Home;
