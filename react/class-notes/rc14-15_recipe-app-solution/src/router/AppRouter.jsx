@@ -4,6 +4,7 @@ import Navbar from "../components/nav/Navbar";
 import About from "../pages/home/about/About";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
+import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
     return (
@@ -14,7 +15,10 @@ const AppRouter = () => {
     <Routes>
     <Route path="/" element={<Home/> } />  
     <Route path="login" element={<Login/> } />  
-    <Route path="about" element={<About/> } />     
+    <Route path="about" element={<PrivateRouter/>} >
+    <Route path="" element={<About/> } /> 
+    </Route>
+       
     </Routes>
     </BrowserRouter>
     )
