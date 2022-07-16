@@ -8,8 +8,8 @@ class categoriList extends Component {
     //     state:{};
     }
 
-    render() {
-        return (
+    render();{
+return (
             <div>
                 <h3>{this.props.info.title}</h3>
                 <ListGroupItem>emre eken</ListGroupItem>
@@ -20,7 +20,7 @@ class categoriList extends Component {
 
             </div>
         );
-    }
-}
+             }
+
 
 export default categoriList;
