@@ -6,6 +6,9 @@ import ProductList from './components/ProductList'
 import{Row} from 'reactstrap';
 
 function App() {
+
+  let productInfo={title:"ProductList "}
+  let Categoryınfo={title:"Category list"}
   return (
     <div>
   
@@ -14,11 +17,13 @@ function App() {
         <Navi></Navi>
     </Row>
     <Row>
-       <Col xs="6" >
-       <CategoryList title="Category list" />
+       <Col xs="6" >   
+       {/* title="Category list" buşekilde yada
+         değişken ile title={titleCategory} */}   
+       <CategoryList info={Categoryınfo} />
        </Col>
        <Col xs="6" >
-       <ProductList title="Product list" />
+       <ProductList info={productInfo}/>
        </Col>
     </Row>
    </Container>
@@ -27,5 +32,10 @@ function App() {
     </div>
   );
 }
+
+{/*let titleProduct="Product listesi"
+let titleCategory="category listesi" bu şekilde de olur ama uzun yol
+ props:bir componentten diğerine veri taşıma demek
+state ise bir componente ait özellik demek ve biz bu özelliğin diğer componentlere gitmesini istemiyorsak state kullanılıyoruz.*/}
 
 export default App;
