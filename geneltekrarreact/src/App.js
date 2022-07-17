@@ -15,10 +15,10 @@ function App() {
     </Row>
     <Row>
        <Col xs="6" >
-       <CategoryList/>
+       <CategoryList title="Category list" />
        </Col>
        <Col xs="6" >
-       <ProductList/>
+       <ProductList title="Product list" />
        </Col>
     </Row>
    </Container>

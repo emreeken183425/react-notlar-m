@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import {ListGroup,ListGroupItem} from 'reactstrap';
 class CategoryList extends Component {
+    constructor(props){
+        super(props);
+        state:{}
+    }
     render() {
         return (
             <div>
-                <h3>CategoryList </h3>
+                <h3>{this.props.title} </h3>
                 <ListGroup>
                      <ListGroupItem>Cras justo odio </ListGroupItem>
                      <ListGroupItem>Dapibus ac facilisis in  </ListGroupItem>
@@ -14,7 +18,7 @@ class CategoryList extends Component {
                 </ListGroup>
             </div>
         );
-    }
+    } 
 }
 
 export default CategoryList;
