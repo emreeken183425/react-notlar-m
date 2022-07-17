@@ -1,32 +1,30 @@
-import { Col, Container } from 'reactstrap';
+
 import './App.css';
 import CategoryList from './components/CategoryList';
 import Navi from './components/Navi';
-import ProductList from './components/ProductList'
-import{Row} from 'reactstrap';
+import ProductList from './components/ProductList';
+import{Container,Row,Col } from 'reactstrap';
 
 function App() {
-
-  let productInfo={title:"ProductList "}
-  let Categoryınfo={title:"Category list"}
+  let titleCategory={title:"category list",başka:"emre" }
+  let titleProduct={title:"Product List",eken:"emre"}
+  
   return (
     <div>
-  
-   <Container>
-   <Row>
-        <Navi></Navi>
-    </Row>
-    <Row>
-       <Col xs="6" >   
-       {/* title="Category list" buşekilde yada
-         değişken ile title={titleCategory} */}   
-       <CategoryList info={Categoryınfo} />
-       </Col>
-       <Col xs="6" >
-       <ProductList info={productInfo}/>
-       </Col>
-    </Row>
-   </Container>
+      <Container>
+        <Row>
+          <Navi/>        
+        </Row>
+        <Row>        
+      <Col xs="9" lg="6" >
+      <CategoryList title={titleCategory} />      
+      </Col>
+      <Col xs="3" lg="6" >      
+      <ProductList title={titleProduct} />
+      </Col>
+        </Row>
+      </Container>
+   
    
  
     </div>

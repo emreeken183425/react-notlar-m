@@ -4,8 +4,7 @@ class ProductList extends Component {
     render() {
         return (
             <div>
-                <h1>{this.props.title.title} </h1>
-                <h1>{this.props.title.eken} </h1>
+                <h1>ProductList</h1>
             </div>
         );
     }
