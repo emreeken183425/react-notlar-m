@@ -7,9 +7,17 @@ import ProductList from './components/ProductList';
 
 export default class App extends Component{
 
-  render(){
-    return(
+  state={currentCategory:""}
 
+  changeCagetory=category=>{
+    this.setState({currentCategory:category.CategoryName})
+};
+
+  render(){
+  let  productInfo={title:"productList"}
+  let categoryInfo={title:"Categorylist"}
+ 
+    return(
       <div >
       <h1>STATESLER</h1>
      <Container>      
@@ -18,10 +26,10 @@ export default class App extends Component{
         </Row>
         <Row>
         <Col sm="8" >
-       <CategoryList/>        
+       <CategoryList currentCategory={this.state.currentCategory } changeCagetory={this.changeCagetory } info={categoryInfo} />        
        </Col>
        <Col sm="4">
-       <ProductList/>
+       <ProductList info={productInfo} currentCategory={this.state.currentCategory }/>
        </Col>
         </Row>   
      </Container>

@@ -15,7 +15,7 @@ class ProductList extends Component {
     render() {
         return (
             <div>
-                <h1>ProductList</h1>
+                <h1>product-{this.props.currentCategory}  </h1>
                 <ListGroup >
                     {this.state.producties.map(product=>(
                         <ListGroupItem key={product.productyId } >{product.ProductName} </ListGroupItem>

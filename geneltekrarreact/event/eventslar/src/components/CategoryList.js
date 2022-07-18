@@ -10,9 +10,7 @@ state={
     ],
     currentCategory:""
 };
-changeCagetory=category=>{
-    this.setState({currentCategory:category.CategoryName})
-};
+
     
     render() {
         return (
@@ -20,10 +18,10 @@ changeCagetory=category=>{
               <ListGroup>
                 <h1>Categorylist</h1>
                 {this.state.categoriyes.map(category=>(
-                    <ListGroupItem onClick={()=>this.changeCagetory(category)} key={category.categoryId } >{category.CategoryName } </ListGroupItem>
+                    <ListGroupItem onClick={()=>this.props.changeCagetory(category)} key={category.categoryId } >{category.CategoryName } </ListGroupItem>
                 ) ) }
               </ListGroup>
-              <h4>{this.state.currentCategory} </h4>
+              <h4>{this.props.currentCategory} </h4>
             </div>
         );
     }
