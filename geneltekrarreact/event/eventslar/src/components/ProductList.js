@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
-import {ListGroup, ListGroupItem } from 'reactstrap';
+import {Table } from 'reactstrap';
 
 class ProductList extends Component {
-    state={
-        producties:[
-            {productyId:1,ProductName:"elma"},
-            {productyId:2,ProductName:"armut" }
-        ],
-        delivery:[
-            {vehicleId:1,vehicleName:"tren"},
-            {vehicleId:2,vehicleName:"Bus"}
-        ]
+    componentDidMount(){
+        this.getproducts();
     }
+ 
     render() {
         return (
             <div>
                 <h1>product-{this.props.currentCategory}  </h1>
-                <ListGroup >
-                    {this.state.producties.map(product=>(
-                        <ListGroupItem key={product.productyId } >{product.ProductName} </ListGroupItem>
-                    ) ) },
-                    {
-                        this.state.delivery.map(vehic=>(
-                            <ListGroupItem key={vehic.vehicleId } >{vehic.vehicleName} </ListGroupItem>
-                        ))
-                    }
-                </ListGroup>
+                
+                <Table
+>
+  <thead>
+    <tr>
+      <th># </th>
+      <th>First Name</th>
+      <th>Last Name </th>
+      <th> Username </th>
+    </tr>
+  </thead>
+  <tbody>
+  {this.props.products.map(product=>(
+                    <tr  key={product.id } >
+                    <th scope="row">{product.id} </th>
+                    <td> {product.productName} </td>
+                    <td> {product.productName} </td>
+                    <td> {product.productName} </td>
+                  </tr>  ) )
+    }
+    
+    
+  </tbody>
+</Table>
             </div>
         );
     }
