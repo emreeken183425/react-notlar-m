@@ -1,30 +1,39 @@
-import { Col, Container, Row } from 'reactstrap';
+
 import './App.css';
 import CategoryList from './components/CategoryList';
-import Navi from "./components/Navi";
+import Navi from './components/Navi';
 import ProductList from './components/ProductList';
+import{Container,Row,Col } from 'reactstrap';
 
 function App() {
+  let titleCategory={title:"category list",başka:"emre" }
+ 
+  
   return (
-    <div >
-      <h1>STATESLER</h1>
-     <Container>      
+    <div>
+      <Container>
         <Row>
-        <Navi/>      
+          <Navi/>        
         </Row>
-        <Row>
-        <Col sm="8" >
-       <CategoryList/>        
-       </Col>
-       <Col sm="4">
-       <ProductList/>
-       </Col>
+        <Row>        
+      <Col xs="9" lg="6" >
+      <CategoryList title={titleCategory} />      
+      </Col>
+      <Col xs="3" lg="6" >      
+      <ProductList  />
+      </Col>
         </Row>
-       
-       
-     </Container>
+      </Container>
+   
+   
+ 
     </div>
   );
 }
+
+{/*let titleProduct="Product listesi"
+let titleCategory="category listesi" bu şekilde de olur ama uzun yol
+ props:bir componentten diğerine veri taşıma demek
+state ise bir componente ait özellik demek ve biz bu özelliğin diğer componentlere gitmesini istemiyorsak state kullanılıyoruz.*/}
 
 export default App;
