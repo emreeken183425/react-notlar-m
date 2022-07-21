@@ -4,31 +4,42 @@ import CategoryList from './components/CategoryList';
 import Navi from './components/Navi';
 import ProductList from './components/ProductList';
 import{Container,Row,Col } from 'reactstrap';
+import { Component } from 'react';
 
-function App() {
-  let titleCategory={title:"category list" }
-  let titleProduct={title:"ProductList",}
+export default class App extends Component{
+  state={
+    currenCategory:"",
   
-  return (
-    <div>
-      <Container>
-        <Row>
-          <Navi/>        
-        </Row>
-        <Row>        
-      <Col xs="9" lg="6" >
-      <CategoryList title={titleCategory} />      
-      </Col>
-      <Col xs="3" lg="6" >      
-      <ProductList title={titleProduct} />
-      </Col>
-        </Row>
-      </Container>
+  }
+  changeCategory=category=>{
+    this.setState({currenCategory:category.categoryName })
+}
+
+  render(){
+    let titleCategory={title:"category list" }
+    let titleProduct={title:"ProductList"}
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Navi/>        
+          </Row>
+          <Row>        
+        <Col xs="6" lg="6" >
+        <CategoryList currenCategory={this.state.currenCategory} changeCategory={this.changeCategory}  title={titleCategory} />      
+        </Col>
+        <Col xs="6" lg="6" >      
+        <ProductList  currenCategory={this.state.currenCategory} title={titleProduct} />
+        </Col>
+          </Row>
+        </Container>
+     
+     
    
-   
- 
-    </div>
-  );
+      </div>
+    );
+  }
+
 }
 
 {/*let titleProduct="Product listesi"
@@ -36,4 +47,3 @@ let titleCategory="category listesi" bu şekilde de olur ama uzun yol
  props:bir componentten diğerine veri taşıma demek
 state ise bir componente ait özellik demek ve biz bu özelliğin diğer componentlere gitmesini istemiyorsak state kullanılıyoruz.*/}
 
-export default App;

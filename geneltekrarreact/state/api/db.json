@@ -1,0 +1,155 @@
+{
+"products":[
+    {
+        "id":1,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":2,
+        "categoryId":1,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":3,
+        "categoryId":1,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":4,
+        "categoryId":1,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":5,
+        "categoryId":1,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":6,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":7,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":8,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":9,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":10,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":11,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":1,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":12,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":13,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+
+    {
+        "id":14,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":15,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    },
+    {
+        "id":16,
+        "categoryId":2,
+        "quantityPerUnit":"48 -6 oz jars",
+        "unitPrice":"23",
+        "unitInStocl":53
+    }
+
+],
+
+"categories":[
+    {
+        "id":1,
+        "categoryName":"Bevereges",
+        "seoUrl":"Beverages"
+    },
+    {
+        "id":2,
+        "categoryName":"condimentes",
+        "seoUrl":"condiments"
+    },
+    {
+        "id":3,
+        "categoryName":"elma",
+        "seoUrl":"elma"
+    },
+    {
+        "id":4,
+        "categoryName":"erik",
+        "seoUrl":"erik"
+    }
+    
+
+]
+
+
+
+
+
+}
