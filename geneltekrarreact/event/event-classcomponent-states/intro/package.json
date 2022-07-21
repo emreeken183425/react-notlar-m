@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "intro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,6 +23,9 @@
       "react-app/jest"
     ]
   },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+},
   "browserslist": {
     "production": [
       ">0.2%",

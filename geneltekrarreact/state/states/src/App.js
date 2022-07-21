@@ -14,7 +14,11 @@ export default class App extends Component{
   changeCategory=category=>{
     this.setState({currenCategory:category.categoryName })
 }
-
+getCategories=()=>{
+  fetch("http://localhost:3000/products")
+  .then(response=>response.json())
+  .then(data=>this.setState({categories:data}) );
+}
   render(){
     let titleCategory={title:"category list" }
     let titleProduct={title:"ProductList"}
