@@ -26,7 +26,7 @@ function KeyboardClipboard() {
     <div className='container text-center' >
         <h2>Clipboard</h2>
         <input type="text" onChange={(e)=>setInputvalue(e.target.value)} onKeyDown={handleKeyDown} />
-        <p className='text-start mt-4' >{inputvalue} </p>
+        <p className='text-start mt-4' onCopy={()=>alert('dikkat kopya')} >{inputvalue} </p>
         <textarea rows="10" cols="30" id='area' onPaste={handleAreaPaste} onChange={handleAreaChange} ></textarea>
 
     </div>
