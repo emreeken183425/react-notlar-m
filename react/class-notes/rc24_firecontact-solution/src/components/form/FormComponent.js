@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Grid,
   FormControl,
@@ -10,17 +10,26 @@ import {
   Stack,
   Select,
   Box,
-} from "@mui/material";
-import { AccountCircle } from "@mui/icons-material";
-import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
+} from '@mui/material';
+import { AccountCircle } from '@mui/icons-material';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 
-const FormComponent = () => {
+const FormComponent = ({ info, setInfo, handleSubmit }) => {
+  const handleChange = (e) => {
+    e.preventDefault();
+    // const name=e.target.name;
+    // const value=e.target.value;
+    const { name, value } = e.target;
+    // console.log(name,value)
+    setInfo({ ...info, [name]: value });
+  };
+
   return (
     <Grid
       textAlign="center"
       verticalAlign="middle"
       direction="column"
-      style={{ width: "300" }}
+      style={{ width: '300' }}
     >
       <p className="contact-header">
         <div>
@@ -30,21 +39,21 @@ const FormComponent = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<Clarusway/> "}</code>
+            <code>{'<Clarusway/> '}</code>
           </a>
         </div>
         <span className="design header">design</span>
       </p>
       <h2 className="contact-header">Add Contact</h2>
-    
-      <Box style={{ backgroundColor: "white", padding: "20px" }}>
-        <form>
+
+      <Box style={{ backgroundColor: 'white', padding: '20px' }}>
+        <form onSubmit={handleSubmit}>
           <Stack spacing={3} direction="column">
             <TextField
               variant="outlined"
               name="username"
-              value={null}
-              onChange={null}
+              value={info.username}
+              onChange={handleChange}
               placeholder="Name"
               InputProps={{
                 startAdornment: (
@@ -57,8 +66,8 @@ const FormComponent = () => {
             <TextField
               variant="outlined"
               name="phoneNumber"
-              value={null}
-              onChange={null}
+              value={info.phoneNumber}
+              onChange={handleChange}
               placeholder="Phone Number"
               InputProps={{
                 startAdornment: (
@@ -69,13 +78,13 @@ const FormComponent = () => {
               }}
             />
             <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-              <InputLabel style={{ paddingLeft: "20px" }}>Gender</InputLabel>
+              <InputLabel style={{ paddingLeft: '20px' }}>Gender</InputLabel>
               <Select
                 label="Gender"
                 name="gender"
                 variant="outlined"
-                value={null}
-                onChange={null}
+                value={info.gender}
+                onChange={handleChange}
               >
                 <MenuItem value="Female">Female</MenuItem>
                 <MenuItem value="Male">Male</MenuItem>
