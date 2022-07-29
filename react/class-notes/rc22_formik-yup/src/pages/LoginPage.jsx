@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 import Avatar from '@mui/material/Avatar';
 import { FaLock } from 'react-icons/fa';
 import { Formik, Form } from 'formik';
-
+import * as Yup from 'yup';
 const LoginPage = () => {
   return (
     <Container maxWidth="sm" sx={{ mt: '10rem', textAlign: 'center' }}>
