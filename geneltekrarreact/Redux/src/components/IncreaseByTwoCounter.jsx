@@ -9,7 +9,7 @@ class IncreaseByTwoCounter extends Component {
             <div>
                  <button onClick={e=>{
                     this.props.dispatch(ıncreaseByTwoCounter())
-                } }>2 AR</button>
+                } }>2 ARTIR</button>
             </div>
         );
     }
