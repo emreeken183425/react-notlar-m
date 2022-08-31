@@ -16,6 +16,7 @@ function App() {
           <Route path="instructors" element={<Instructors />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> buradaki * bu sayfadakiler dışında bir şey yazıldığında not found için yazılır */}
         </Routes>
         <Footer />
       </BrowserRouter>
