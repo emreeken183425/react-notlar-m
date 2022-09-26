@@ -9,17 +9,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="container">
-      <BrowserRouter>
+      
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="instructors" element={<Instructors />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-          {/* <Route path="*" element={<NotFound />} /> buradaki * bu sayfadakiler dışında bir şey yazıldığında not found için yazılır */}
+          <Route  path='/' element={<Home/>} />
+          <Route  path='/instructors' element={<Instructors/>} />
+          <Route  path='contact' element={<Contact/>} />
+          <Route  path='*' element={<NotFound/>}  />  
+           {/* "*" buradaki işaret linkler dışında ki her şeyi ifade eder         */}
         </Routes>
+      
         <Footer />
-      </BrowserRouter>
+      
     </div>
   );
 }
