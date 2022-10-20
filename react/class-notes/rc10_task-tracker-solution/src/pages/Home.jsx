@@ -15,9 +15,13 @@ const Home = () => {
 
   console.log(tasks);
   return (
-    <div>
+    <div className="container">
       <Header tasks={tasks} setTasks={setTasks} />
-      <ShowTasks />
+      {tasks.length > 0 ? (
+        <ShowTasks tasks={tasks} setTasks={setTasks} />
+      ) : (
+        <p className="text-center">NO TASK TO SHOW</p>
+      )}
     </div>
   );
 };

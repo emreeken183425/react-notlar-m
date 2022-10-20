@@ -9,18 +9,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="container">
-      
+      <BrowserRouter>
         <Nav />
         <Routes>
-          <Route  path='/' element={<Home/>} />
-          <Route  path='/instructors' element={<Instructors/>} />
-          <Route  path='contact' element={<Contact/>} />
-          <Route  path='*' element={<NotFound/>}  />  
-           {/* "*" buradaki işaret linkler dışında ki her şeyi ifade eder         */}
+          <Route path="/" element={<Home />} />
+          <Route path="instructors" element={<Instructors />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      
         <Footer />
-      
+      </BrowserRouter>
     </div>
   );
 }
